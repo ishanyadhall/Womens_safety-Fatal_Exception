@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SHIELDHER | Smart Women's Safety, Evidence Vault & AI Legal Navigator</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-shield-halved logo-icon"></i>
+                SHIELDHER<span>.</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#usp">Our USP</a></li>
+                <li><a href="#routes"><i class="fa-solid fa-route"></i> Safe Routes</a></li>
+                <li><a href="#evidence"><i class="fa-solid fa-vault"></i> Evidence Vault</a></li>
+                <li><a href="#legal"><i class="fa-solid fa-scale-balanced"></i> Legal Navigator</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div id="backend-status-pill" class="backend-status-pill" title="Backend Server Live Status">
+                    <span class="status-dot"></span>
+                    <span id="backend-status-text">Backend: Checking...</span>
+                </div>
+                <a href="#sos" class="sos-button"><i class="fa-solid fa-phone-volume"></i> SOS 112</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="tagline-badge">
+                <i class="fa-solid fa-shield-heart"></i>
+                PREVENTION • EVIDENCE PROTECTION • LEGAL EMPOWERMENT
+            </div>
+
+            <h1>
+                Navigate Safely.<br>
+                Protect Evidence.<br>
+                <span>Know Your Rights.</span>
+            </h1>
+
+            <p>
+                An intelligent women's safety platform combining <strong>Smart Route Comparison</strong>,
+                tamper-proof <strong>Digital Evidence Vault with SHA-256</strong>, and an
+                <strong>AI Legal Rights Navigator</strong> for Indian legal provisions.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#routes" class="primary-button">
+                    <i class="fa-solid fa-route"></i> Compare Safe Routes
+                </a>
+                <a href="#evidence" class="secondary-button">
+                    <i class="fa-solid fa-vault"></i> Secure Evidence
+                </a>
+                <a href="#legal" class="outline-button">
+                    <i class="fa-solid fa-scale-balanced"></i> Ask AI Legal Rights
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-card-preview">
+            <div class="preview-metric-card">
+                <div class="metric-icon blue"><i class="fa-solid fa-route"></i></div>
+                <div>
+                    <h4>Dual Route Engine</h4>
+                    <p>Fastest vs. Safer Alternative</p>
+                </div>
+            </div>
+            <div class="preview-metric-card">
+                <div class="metric-icon purple"><i class="fa-solid fa-fingerprint"></i></div>
+                <div>
+                    <h4>SHA-256 Vault</h4>
+                    <p>Tamper-Proof File Integrity</p>
+                </div>
+            </div>
+            <div class="preview-metric-card">
+                <div class="metric-icon pink"><i class="fa-solid fa-gavel"></i></div>
+                <div>
+                    <h4>Indian Law AI</h4>
+                    <p>BNS, IPC & IT Act Guidance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- USP 3-PILLAR SECTION -->
+    <section class="usp-section" id="usp">
+        <div class="section-header">
+            <span class="sub-badge">OUR THREE CORE PILLARS</span>
+            <h2>Why SHIELDHER is Different</h2>
+            <p>Combining prevention, tamper-proof protection, and legal empowerment in one unified platform.</p>
+        </div>
+
+        <div class="usp-grid">
+            <div class="usp-card pillar-prevention">
+                <div class="usp-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                <span class="pillar-label">Pillar 1: Prevention</span>
+                <h3>Smart Route Comparison</h3>
+                <p>
+                    Compare the fastest route with a safer alternative. Side-by-side travel time, distance, and safety risk indicators including lighting and activity levels.
+                </p>
+                <a href="#routes" class="card-link">Explore Safe Routes &rarr;</a>
+            </div>
+
+            <div class="usp-card pillar-evidence">
+                <div class="usp-icon"><i class="fa-solid fa-fingerprint"></i></div>
+                <span class="pillar-label">Pillar 2: Evidence Protection</span>
+                <h3>Digital Evidence Vault</h3>
+                <p>
+                    Store screenshots of harassment, cyberstalking, or blackmail. Generates cryptographic SHA-256 digital fingerprints to prove files were not altered or tampered with.
+                </p>
+                <a href="#evidence" class="card-link">Open Evidence Vault &rarr;</a>
+            </div>
+
+            <div class="usp-card pillar-legal">
+                <div class="usp-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <span class="pillar-label">Pillar 3: Legal Empowerment</span>
+                <h3>AI Legal Rights Navigator</h3>
+                <p>
+                    Describe your problem in plain language. AI identifies applicable Indian laws (BNS, IPC, IT Act), outlines victim rights like Zero FIR, and directs you to complaint channels.
+                </p>
+                <a href="#legal" class="card-link">Consult Legal AI &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 1. SMART ROUTE COMPARISON SECTION -->
+    <section class="route-section" id="routes">
+        <div class="section-header">
+            <span class="sub-badge">PILLAR 1: PREVENTION</span>
+            <h2>Smart Route Comparison</h2>
+            <p>
+                Enter your start point and destination. View the <strong>fastest route (blue)</strong> and the <strong>safer alternative (green)</strong> with distance, duration, and safety indicators.
+            </p>
+        </div>
+
+        <!-- Presets -->
+        <div class="route-presets">
+            <span class="preset-label">Quick Presets:</span>
+            <button type="button" class="preset-btn" onclick="setPreset('Connaught Place, New Delhi', 'Hauz Khas, New Delhi')">Connaught Place ➔ Hauz Khas</button>
+            <button type="button" class="preset-btn" onclick="setPreset('Delhi University, Delhi', 'Saket, New Delhi')">Delhi Univ ➔ Saket</button>
+            <button type="button" class="preset-btn" onclick="setPreset('India Gate, New Delhi', 'Cyber City, Gurugram')">India Gate ➔ Cyber City</button>
+            <button type="button" class="preset-btn location-btn" onclick="useCurrentLocation()"><i class="fa-solid fa-location-crosshairs"></i> Use Live GPS</button>
+        </div>
+
+        <!-- Controls -->
+        <div class="route-controls">
+            <div class="input-group">
+                <i class="fa-solid fa-circle-dot origin-icon"></i>
+                <input type="text" id="start" placeholder="Enter starting location (e.g. Connaught Place)" value="Connaught Place, New Delhi">
+            </div>
+
+            <div class="swap-btn" onclick="swapLocations()" title="Swap start and destination">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            </div>
+
+            <div class="input-group">
+                <i class="fa-solid fa-location-dot destination-icon"></i>
+                <input type="text" id="destination" placeholder="Enter destination (e.g. Hauz Khas)" value="Hauz Khas, New Delhi">
+            </div>
+
+            <button class="compare-btn" onclick="compareRoutes()">
+                <i class="fa-solid fa-magnifying-glass-location"></i> Compare Routes
+            </button>
+        </div>
+
+        <!-- Status message -->
+        <div id="route-status" class="route-status"></div>
+
+        <!-- MAP CONTAINER -->
+        <div class="map-wrapper">
+            <div id="map"></div>
+            <div class="map-floating-legend">
+                <div class="legend-item"><span class="legend-color blue"></span> Fastest Route</div>
+                <div class="legend-item"><span class="legend-color green"></span> Safer Alternative</div>
+            </div>
+        </div>
+
+        <!-- SIDE-BY-SIDE ROUTE COMPARISON CARDS -->
+        <div id="route-cards-container" class="route-cards-container">
+            <!-- Dynamically populated by script.js -->
+        </div>
+
+        <!-- SAFETY INDICATORS EXPLANATION -->
+        <div class="safety-indicators-card">
+            <div class="indicator-header">
+                <i class="fa-solid fa-shield-virus"></i>
+                <h4>Future-Ready Route Safety Risk Scoring Model</h4>
+            </div>
+            <p>
+                Our safety algorithm evaluates route safety using multi-factor indicators:
+            </p>
+            <div class="indicators-grid">
+                <div class="indicator-item">
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <div>
+                        <strong>Street Lighting Index</strong>
+                        <span>Main arterial corridors vs. unlit side alleys</span>
+                    </div>
+                </div>
+                <div class="indicator-item">
+                    <i class="fa-solid fa-users"></i>
+                    <div>
+                        <strong>Public Activity & Transit Hubs</strong>
+                        <span>Proximity to 24/7 metro stations, commercial footfall</span>
+                    </div>
+                </div>
+                <div class="indicator-item">
+                    <i class="fa-solid fa-building-shield"></i>
+                    <div>
+                        <strong>Police Booths & Safe Havens</strong>
+                        <span>Distance to PCR vans, hospitals, and female assistance booths</span>
+                    </div>
+                </div>
+                <div class="indicator-item">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <div>
+                        <strong>Reported Incident Density</strong>
+                        <span>Historical FIR records and crowdsourced safety alerts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 2. DIGITAL EVIDENCE VAULT SECTION -->
+    <section class="vault-section" id="evidence">
+        <div class="section-header">
+            <span class="sub-badge">PILLAR 2: EVIDENCE PROTECTION</span>
+            <h2>Digital Evidence Vault</h2>
+            <p>
+                Secure screenshots, photos, chats, and audio files of harassment or cyberstalking.
+                Generates a cryptographic <strong>SHA-256 digital fingerprint</strong> to prove files are authentic and tamper-free for legal proceedings.
+            </p>
+        </div>
+
+        <div class="vault-grid">
+            <!-- UPLOAD & HASH CARD -->
+            <div class="vault-card upload-box">
+                <div class="card-title">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <h3>Secure & Fingerprint New Evidence</h3>
+                </div>
+                <p class="card-desc">
+                    Files are processed locally in your browser. SHA-256 hash is computed instantly to create an immutable cryptographic timestamp.
+                </p>
+
+                <form id="vault-upload-form" onsubmit="handleEvidenceUpload(event)">
+                    <!-- Drag & drop zone -->
+                    <div class="drop-zone" id="drop-zone" onclick="document.getElementById('evidence-file-input').click()">
+                        <i class="fa-solid fa-file-shield drop-icon"></i>
+                        <p class="drop-text"><strong>Click to browse</strong> or drag & drop evidence file</p>
+                        <span class="drop-hint">Supports PNG, JPG, PDF, MP4, MP3, DOCX (Max 25MB)</span>
+                        <input type="file" id="evidence-file-input" style="display: none;" onchange="handleFileSelect(event)">
+                    </div>
+
+                    <div id="selected-file-badge" class="selected-file-badge" style="display: none;">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                        <span id="selected-file-name">No file selected</span>
+                        <span id="selected-file-size" class="file-size"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="evidence-category"><i class="fa-solid fa-tag"></i> Incident Category</label>
+                            <select id="evidence-category" required>
+                                <option value="Cyberstalking (Social Media / WhatsApp)">Cyberstalking (Social Media / WhatsApp)</option>
+                                <option value="Threats & Criminal Intimidation">Threats & Criminal Intimidation</option>
+                                <option value="Non-Consensual Images / Blackmail">Non-Consensual Images / Blackmail</option>
+                                <option value="Workplace Harassment (POSH)">Workplace Harassment (POSH)</option>
+                                <option value="Defamation & Morphing">Defamation & Morphing</option>
+                                <option value="Street / Public Harassment">Street / Public Harassment</option>
+                                <option value="Domestic Harassment / Cruelty">Domestic Harassment / Cruelty</option>
+                                <option value="Other Evidence">Other Evidence</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="incident-date"><i class="fa-regular fa-calendar"></i> Date of Incident</label>
+                            <input type="date" id="incident-date" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="incident-notes"><i class="fa-regular fa-comment-dots"></i> Case Notes / Suspect Handle or Details</label>
+                        <textarea id="incident-notes" rows="2" placeholder="e.g., Threatening Instagram DMs received from @handle, screenshots captured with timestamps"></textarea>
+                    </div>
+
+                    <button type="submit" class="vault-submit-btn" id="upload-btn">
+                        <i class="fa-solid fa-fingerprint"></i> Compute SHA-256 & Store in Vault
+                    </button>
+                </form>
+            </div>
+
+            <!-- INTEGRITY VERIFICATION TOOL -->
+            <div class="vault-card verify-box">
+                <div class="card-title">
+                    <i class="fa-solid fa-check-double"></i>
+                    <h3>Verify Evidence Integrity</h3>
+                </div>
+                <p class="card-desc">
+                    Concerned a file was modified or corrupted? Re-upload the file to recalculate its SHA-256 fingerprint and check bit-for-bit authenticity against original vault records.
+                </p>
+
+                <div class="verify-drop-zone" onclick="document.getElementById('verify-file-input').click()">
+                    <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
+                    <p>Select file to verify tamper status</p>
+                    <input type="file" id="verify-file-input" style="display: none;" onchange="handleIntegrityCheck(event)">
+                </div>
+
+                <div id="verify-result-box" class="verify-result-box" style="display: none;">
+                    <!-- Result dynamically generated -->
+                </div>
+
+                <div class="legal-badge-box">
+                    <i class="fa-solid fa-scale-unbalanced"></i>
+                    <div>
+                        <strong>Admissibility Under Section 63 BSA 2023</strong>
+                        <p>Cryptographic hashing provides tamper detection under Indian Evidence Law (BSA 2023 / Sec 65B Indian Evidence Act) for electronic records.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EVIDENCE VAULT INVENTORY -->
+        <div class="vault-inventory">
+            <div class="inventory-header">
+                <div>
+                    <h3><i class="fa-solid fa-lock"></i> Secured Evidence Records (<span id="vault-count">0</span>)</h3>
+                    <p>Locally stored cryptographic records with immutable digital fingerprints.</p>
+                </div>
+                <div class="inventory-actions">
+                    <button class="clear-vault-btn" onclick="clearAllEvidence()" title="Clear all local vault records">
+                        <i class="fa-solid fa-trash-can"></i> Clear Vault
+                    </button>
+                </div>
+            </div>
+
+            <div id="vault-list" class="vault-list">
+                <!-- Dynamically populated or empty state -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 3. AI LEGAL RIGHTS NAVIGATOR SECTION -->
+    <section class="legal-section" id="legal">
+        <div class="section-header">
+            <span class="sub-badge">PILLAR 3: LEGAL EMPOWERMENT</span>
+            <h2>AI Legal Rights Navigator</h2>
+            <p>
+                Describe your situation in simple, everyday language (Hindi, Hinglish, or English).
+                The AI analyzes relevant <strong>Indian Laws (BNS, IPC, IT Act)</strong>, your rights as a victim, complaint procedures, and emergency channels.
+            </p>
+        </div>
+
+        <!-- Quick Scenario Chips -->
+        <div class="quick-scenarios">
+            <span class="scenario-label">Quick Scenarios:</span>
+            <button class="scenario-chip" onclick="fillLegalQuery('Someone is sending threatening and abusive messages on my WhatsApp and Instagram, stalking my profile continuously.')">
+                <i class="fa-brands fa-instagram"></i> Cyberstalking & Threatening Messages
+            </button>
+            <button class="scenario-chip" onclick="fillLegalQuery('A person is blackmailing me and threatening to leak my private photos and morph my images online.')">
+                <i class="fa-solid fa-lock-open"></i> Photo Blackmail & Image Morphing
+            </button>
+            <button class="scenario-chip" onclick="fillLegalQuery('My male colleague at the workplace is passing sexually colored remarks and sending inappropriate emails despite my repeated objections.')">
+                <i class="fa-solid fa-briefcase"></i> Workplace Sexual Harassment (POSH)
+            </button>
+            <button class="scenario-chip" onclick="fillLegalQuery('A stranger has been following me repeatedly from the metro station to my home and making obscene gestures.')">
+                <i class="fa-solid fa-person-walking-dashed-line-arrow-right"></i> Street Eve-Teasing & Physical Stalking
+            </button>
+            <button class="scenario-chip" onclick="fillLegalQuery('I am facing domestic violence, physical assault, and continuous threats of harm from husband and in-laws.')">
+                <i class="fa-solid fa-house-chimney-crack"></i> Domestic Violence & Mental Cruelty
+            </button>
+        </div>
+
+        <!-- Legal Query Input Box -->
+        <div class="legal-query-container">
+            <div class="query-box">
+                <label for="legal-user-input">
+                    <i class="fa-solid fa-comment-dots"></i> Describe your issue or incident:
+                </label>
+                <textarea id="legal-user-input" rows="4" placeholder="Type here in simple English or Hindi / Hinglish. For example: 'A person is repeatedly calling and messaging me from fake accounts after I told him to stop, and threatening to defame me.'"></textarea>
+
+                <div class="query-actions">
+                    <span class="privacy-note">
+                        <i class="fa-solid fa-user-shield"></i> Confidential & Client-Side. No personal data shared.
+                    </span>
+                    <button class="legal-analyze-btn" onclick="analyzeLegalRights()">
+                        <i class="fa-solid fa-brain"></i> Analyze Legal Rights & Next Steps
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI LEGAL ADVICE RESULT CONTAINER -->
+        <div id="legal-result-card" class="legal-result-card" style="display: none;">
+            <!-- Dynamically populated by script.js -->
+        </div>
+    </section>
+
+
+    <!-- 4. EMERGENCY SOS & HELPLINES SECTION -->
+    <section class="emergency-section" id="sos">
+        <div class="emergency-container">
+            <div class="emergency-header">
+                <div class="pulse-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                <h2>Need Immediate Help?</h2>
+                <p>If you are in immediate danger anywhere in India, contact emergency services without hesitation.</p>
+            </div>
+
+            <div class="emergency-dial-cards">
+                <a href="tel:112" class="emergency-card primary-sos">
+                    <div class="sos-number">112</div>
+                    <div class="sos-details">
+                        <h4>National Emergency Helpline</h4>
+                        <p>All-in-one Police, Fire & Medical dispatch across India</p>
+                    </div>
+                    <span class="call-badge">TAP TO CALL</span>
+                </a>
+
+                <a href="tel:1091" class="emergency-card">
+                    <div class="sos-number">1091</div>
+                    <div class="sos-details">
+                        <h4>Women in Distress Helpline</h4>
+                        <p>24x7 Dedicated Women Safety Cell</p>
+                    </div>
+                    <span class="call-badge">TAP TO CALL</span>
+                </a>
+
+                <a href="tel:181" class="emergency-card">
+                    <div class="sos-number">181</div>
+                    <div class="sos-details">
+                        <h4>Women Helpline (Domestic Abuse)</h4>
+                        <p>Counseling, rescue & emergency shelter coordination</p>
+                    </div>
+                    <span class="call-badge">TAP TO CALL</span>
+                </a>
+
+                <a href="tel:1930" class="emergency-card">
+                    <div class="sos-number">1930</div>
+                    <div class="sos-details">
+                        <h4>National Cyber Crime Helpline</h4>
+                        <p>Immediate reporting of cyber fraud & extortion</p>
+                    </div>
+                    <span class="call-badge">TAP TO CALL</span>
+                </a>
+            </div>
+
+            <!-- SIMULATED SOS TRIGGER -->
+            <div class="sos-simulation-box">
+                <h4><i class="fa-solid fa-satellite-dish"></i> Rapid Emergency Alert Simulation</h4>
+                <p>Trigger an instant emergency broadcast that packages your live GPS coordinates with an SOS alert.</p>
+                <button class="trigger-sos-btn" onclick="triggerSimulatedSOS()">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Trigger Simulated SOS Broadcast
+                </button>
+                <div id="sos-status-box" class="sos-status-box"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">SHIELDHER<span>.</span></div>
+                <p>Prevention • Evidence Protection • Legal Empowerment</p>
+            </div>
+            <div class="footer-links">
+                <a href="#routes">Smart Routes</a>
+                <a href="#evidence">Evidence Vault</a>
+                <a href="#legal">Legal Rights</a>
+                <a href="#sos">Emergency 112</a>
+                <a href="https://cybercrime.gov.in" target="_blank" rel="noopener">cybercrime.gov.in</a>
+            </div>
+        </div>
+        <div class="footer-disclaimer">
+            <p>
+                <strong>Legal Disclaimer:</strong> SHIELDHER provides educational and preliminary legal information based on Indian statutes (Bharatiya Nyaya Sanhita, Indian Penal Code, IT Act). It does not substitute formal counsel from an advocate or law enforcement officer. In emergency scenarios, call 112 immediately.
+            </p>
+            <p>© 2026 SHIELDHER. Built for women's safety & justice.</p>
+        </div>
+    </footer>
+
+
+    <!-- LEAFLET MAP JAVASCRIPT LIBRARY -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- SHIELDHER APPLICATION SCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
